@@ -1,44 +1,30 @@
-import { Component } from 'react'
-import { connect } from 'react-redux'
-import { View, Button, Text } from '@tarojs/components'
-
-import { add, minus, asyncAdd } from '../../actions/counter'
-
-import './index.scss'
+import React,{Component} from 'react'
+import {View} from '@tarojs/components'
+import TabBar from "../common/tabBar";
+import Swiper from "./indexSwiper";
+import GoodsList from "./goodsList";
 
 
-@connect(({ counter }) => ({
-  counter
-}), (dispatch) => ({
-  add () {
-    dispatch(add())
-  },
-  dec () {
-    dispatch(minus())
-  },
-  asyncAdd () {
-    dispatch(asyncAdd())
-  }
-}))
 class Index extends Component {
-  componentWillReceiveProps (nextProps) {
+  componentWillReceiveProps(nextProps) {
     console.log(this.props, nextProps)
   }
 
-  componentWillUnmount () { }
+  componentWillUnmount() {
+  }
 
-  componentDidShow () { }
+  componentDidShow() {
+  }
 
-  componentDidHide () { }
+  componentDidHide() {
+  }
 
-  render () {
+  render() {
     return (
-      <View className='index'>
-        <Button className='add_btn' onClick={this.props.add}>+</Button>
-        <Button className='dec_btn' onClick={this.props.dec}>-</Button>
-        <Button className='dec_btn' onClick={this.props.asyncAdd}>async</Button>
-        <View><Text>{this.props.counter.num}</Text></View>
-        <View><Text>Hello, World</Text></View>
+      <View>
+        <Swiper></Swiper>
+        <GoodsList></GoodsList>
+        <TabBar tabBarCurrent={0} />
       </View>
     )
   }
