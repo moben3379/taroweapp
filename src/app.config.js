@@ -5,7 +5,21 @@ export default defineAppConfig({
   window: {
     backgroundTextStyle: 'light',
     navigationBarBackgroundColor: '#fff',
-    navigationBarTitleText: 'WeChat',
+    navigationBarTitleText: '返回',
     navigationBarTextStyle: 'black'
-  }
+  },
+  subPackages: [
+    {
+      "root": "pages/orders/",
+      "pages": [
+        "index"
+      ]
+    },
+    {
+      "root": "pages/mymanagement/",
+      "pages": [
+        "index"
+      ]
+    },
+  ]
 })
