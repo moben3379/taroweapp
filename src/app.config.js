@@ -21,5 +21,11 @@ export default defineAppConfig({
         "index"
       ]
     },
+    {
+      "root": "pages/cart/",
+      "pages": [
+        "cart"
+      ]
+    },
   ]
 })
