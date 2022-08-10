@@ -2,28 +2,31 @@ import React,{Component} from 'react'
 import {View} from '@tarojs/components'
 import TabBar from "../common/tabBar";
 import Swiper from "./indexSwiper";
-import GoodsList from "./goodsList";
+import Menus from "./menus";
 
 
 class Index extends Component {
-  componentWillReceiveProps(nextProps) {
-    console.log(this.props, nextProps)
+  constructor (props) {
+    super(props);
   }
-
-  componentWillUnmount() {
-  }
-
-  componentDidShow() {
-  }
-
-  componentDidHide() {
-  }
+  // componentWillReceiveProps(nextProps) {
+  // }
+  // componentDidMount(){
+  //   }
+  // componentWillUnmount() {
+  // }
+  //
+  // componentDidShow() {
+  // }
+  //
+  // componentDidHide() {
+  // }
 
   render() {
     return (
       <View>
         <Swiper></Swiper>
-        <GoodsList></GoodsList>
+        <Menus></Menus>
         <TabBar tabBarCurrent={0} />
       </View>
     )

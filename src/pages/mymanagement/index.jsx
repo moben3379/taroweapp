@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+
 import {Text, View,Button,Image} from '@tarojs/components'
 import TabBar from "../common/tabBar";
 import Taro from "@tarojs/taro";
@@ -155,6 +156,7 @@ class MyManagement extends Component {
       {edit}
       {button}
       <TabBar tabBarCurrent={2}/>
+
     </View>
   )
 }
