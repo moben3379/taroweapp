@@ -2,7 +2,9 @@ import React,{Component} from 'react'
 import {View} from '@tarojs/components'
 import TabBar from "../common/tabBar";
 import Swiper from "./indexSwiper";
-import Menus from "./menus";
+import Menus from "../Menu/menus";
+import Bottom from "../bottom/bottom";
+import Top from "./top";
 
 
 class Index extends Component {
@@ -24,9 +26,10 @@ class Index extends Component {
 
   render() {
     return (
-      <View>
+      <View className='index'>
         <Swiper></Swiper>
         <Menus></Menus>
+        <Bottom></Bottom>
         <TabBar tabBarCurrent={0} />
       </View>
     )

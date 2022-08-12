@@ -1,0 +1,62 @@
+
+.bottom{
+  display: flex;
+  width: 100%;
+  position: fixed;
+  bottom: 188px;
+  left: 0;
+  height: 100px;
+  justify-content: center;
+  padding: 0 10px;
+  .bottom_body{
+    .num{
+      position: absolute;
+      margin-left: 42px;
+      margin-top: -16px;
+      width: 30px;
+      height: 30px;
+      border-radius: 30px;
+      color: #FFFFFF;
+      background-color: red;
+      line-height: 30px;
+      text-align: center;
+      z-index: 2;
+    }
+  font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  width: 90%;
+  border-radius: 50px;
+  background-color: #3A3B36;
+  color: #89888d;
+    height: 100px;
+  .text_left{
+    font-size: 28px;
+  text-align: center;
+    line-height: 60px;
+  }
+    .text_right{
+      font-size: 24px;
+      text-align: center;
+      line-height: 60px;
+    }
+    .price{
+      color: #FFFFFF;
+      font-weight: bold;
+      font-size: 30px;
+    }
+    .pay{
+      font-weight: bold;
+      color: black;
+      background-color: yellow;
+      font-size: 25px;
+      width: 130px;
+      display: block;
+      height: 100%;
+      line-height: 90px;
+      text-align: center;
+      border-radius: 0 50px 50px 0;
+    }
+  }
+}
