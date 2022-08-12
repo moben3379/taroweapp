@@ -21,7 +21,8 @@ export default defineAppConfig({
     {
       "root": "pages/mymanagement/",
       "pages": [
-        "index"
+        "index",
+        "edit"
       ]
     },
 
