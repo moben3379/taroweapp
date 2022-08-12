@@ -1,0 +1,37 @@
+
+.order{
+  height: 100%;
+  background-color: rgba(234,232,232,0.5);
+
+}
+
+.orderList{
+  margin: 0 auto;
+  width: 95%;
+  height: 300px;
+  background-color: white;
+  margin-top: 15px;
+  border-radius: 8px;
+}
+.order_num{
+  border-bottom: 0.5px solid #eee;
+  display: flex;
+  justify-content: space-between;
+}
+
+.order_name{
+  border-bottom: 0.5px solid #eee;
+}
+
+.order_bottom{
+  font-size: 32px;
+  display: flex;
+  justify-content: space-between;
+  //float: left;
+}
+.at-button{
+  float: left;
+  left: 400px;
+  margin-left: 30px;
+  margin-top: 35px;
+}

@@ -37,6 +37,7 @@ class Menus extends Component {
         this.setState({
           menuList: res.data.data
         })
+
       },
     });
 
@@ -49,6 +50,7 @@ class Menus extends Component {
 
 
   render() {
+    console.log("菜单列表：",this.state.menuList)
     const tabList = [{ title: '营养套餐' }, { title: '好吃家常' }, { title: '请客大宴' }, { title: '美味小吃' }]
     return (
       <AtTabs current={this.state.current} tabDirection='vertical' height='300px' scroll tabList={tabList} onClick={this.handleClick.bind(this)}>
