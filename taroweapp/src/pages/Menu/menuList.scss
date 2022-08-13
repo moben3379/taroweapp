@@ -1,0 +1,32 @@
+
+
+.menuList{
+  padding: 10px;
+  flex-grow: 1;
+  .menuList_item{
+    flex-grow: 1;
+    display: flex;
+    margin-top: 20px;
+    flex-direction: row;
+    .menuList_list_list{
+      flex-grow: 1;
+      position: relative;
+      font-size: 28px;
+      display: flex;
+      flex-direction: column;
+      margin-left: 10px;
+      height: 200px;
+      justify-content: space-between;
+      .menuList_Price{
+        color: red;
+        font-size:30px ;
+      }
+    }
+    .menuList_img{
+      width: 200px;
+      height: 200px;
+      border-radius: 4px;
+    }
+
+  }
+}
