@@ -24,7 +24,7 @@ getTextByType(type){
     }
 }
 getLine(arr){
-  return   arr.map((item)=>`满￥{item.total}减${item.dec},优惠多多哦`).join(';')
+  return   arr.map((item)=>`满'${item.total}减${item.dec},优惠多多哦`).join(';')
 }
   render() {
     let {activity:[first]}=this.state;

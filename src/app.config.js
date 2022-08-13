@@ -1,7 +1,6 @@
 export default defineAppConfig({
   pages: [
     'pages/index/index',
-    'pages/index/pay'
   ],
   window: {
     backgroundTextStyle: 'light',
@@ -24,9 +23,9 @@ export default defineAppConfig({
       ]
     },
     {
-      "root": "pages/cart/",
+      "root": "pages/pay/",
       "pages": [
-        "cart"
+        "pay"
       ]
     },
   ]

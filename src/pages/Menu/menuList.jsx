@@ -18,10 +18,10 @@ class MenuList extends Component {
             currentList.map((item)=>{
               if (item.menu_Form!==0&&item.menu_Form===selectClassify.id) {
                 return (<View key={item.menu_Id} className='menuList_item'>
-                  <Image className="menuList_img" src={require('../../images/01.jpg')}> </Image>
+                  <image className='menuList_img'  src={item.menu_detail}> </image>
                   <View className='menuList_list_list'>
                     <Text>{item.menu_Name}</Text>
-                    <Text>月售:</Text>
+                    <Text>月售:{item.menu_Count}</Text>
                     <Text className='menuList_Price'>￥{item.menu_Price}</Text>
                     <Purchase menu={item}></Purchase>
                   </View>
