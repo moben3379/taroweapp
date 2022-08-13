@@ -4,6 +4,7 @@ import   './bottom.scss'
 import { AtIcon } from 'taro-ui';
 import {getAll,getEvent} from "../common/utils/utils";
 import Taro from "@tarojs/taro";
+import * as global from '../global_val/global_val'
 let event=getEvent();
 class Bottom extends Component {
   constructor () {
@@ -23,7 +24,9 @@ class Bottom extends Component {
     event.on("purchase",()=>{
       let {allPrice, allNum}=getAll();
       this.setState({Num:allNum,allPrice:allPrice})
+      global.settotlePrice(allPrice)
     })
+
   }
 //跳转支付页面
   payInformation(){

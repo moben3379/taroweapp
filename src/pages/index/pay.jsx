@@ -16,7 +16,7 @@ class Pay extends Component {
   pay(){
     let than=this
     Taro.request({
-      url: global.geturl()+"api/pay",
+      url: global.geturl()+"pay",
       method:"POST",
       data:{
         "price":"0.01",
@@ -36,8 +36,26 @@ class Pay extends Component {
         url: global.geturl()+"sendback",
         method:"GET",
         success(res){
-          if (res == 'SUCCESS'){
+          console.log(res)
+          if (res.data.msg == 'SUCCESS'){
             console.log(res)
+            let data=Taro.getStorageSync('delay')
+            let menu_id=""
+            let menu_name=""
+
+            Object.keys(data).map((keys)=>{
+              if (data[keys]){
+                menu_id=menu_id+data[keys].menu_Id+",";
+                menu_name=menu_name+data[keys].menu_Name+",";
+
+              }
+            })
+            Taro.request({
+              url: global.geturl()+"InsertOrder?menu_id="+menu_id+"&menu_name="+menu_name+"&buyer_name="+global.getnickName()+"&buyer_phone="+global.getPhone()+"&buyer_address="+global.getAddress()+"&buyer_openid="+global.getOpenId()+"&order_amount="+global.gettotlePrice(),
+              success(res){
+                console.log(res)
+              }
+            })
           }
         }
       })
@@ -47,6 +65,7 @@ class Pay extends Component {
     let QRCode
     if (this.state.isShowQRCode){
       QRCode=<image src = 'https://g2.glypro19.com/new.jpg' />
+      // QRCode=<image src = '../../images/new.jpg' />
     }
     return (
       <View  className='activity'>

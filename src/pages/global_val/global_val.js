@@ -4,7 +4,7 @@ var nickName=''
 var address=''
 var phone=''
 var openId=''
-var url = 'https://g2.glypro19/api/'
+var url = 'http://localhost:8090/'
 var totlePrice=''
 
 export function setIsLogin(val){
