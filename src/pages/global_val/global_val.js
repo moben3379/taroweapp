@@ -4,7 +4,8 @@ var nickName=''
 var address=''
 var phone=''
 var openId=''
-var url = 'http://localhost:8090/'
+var url = 'https://g2.glypro19/api/'
+var totlePrice=''
 
 export function setIsLogin(val){
   isLogin=val
@@ -48,4 +49,12 @@ export function getnickName(){
 
 export function geturl(){
   return url
+}
+
+export function gettotlePrice(){
+  return totlePrice
+}
+
+export function settotlePrice(val){
+  totlePrice=val
 }

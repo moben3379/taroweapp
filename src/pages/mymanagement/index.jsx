@@ -26,7 +26,7 @@ class MyManagement extends Component {
       success(res){/*--------获取code-----------*/
         if (res.code){
           Taro.request({/*-------向微信后台获取openid----------*/
-            url:global.geturl()+'api/wxapp/code2session/login',
+            url:global.geturl()+'wxapp/code2session/login',
             data:{
               code:res.code
             },
@@ -141,6 +141,7 @@ class MyManagement extends Component {
     let Info
     let edit
     let nickName
+    let pay
     if (isLogingedIn){//已登录
       Info=<Image className="Image" src={this.state.avatarUrl}></Image>
       nickName=<Text className="nickname">{this.state.nickName}</Text>
