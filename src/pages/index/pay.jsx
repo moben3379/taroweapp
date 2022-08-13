@@ -12,10 +12,12 @@ class Pay extends Component {
   render() {
     return (
       <View  className='activity'>
-        {this.props.data}
+       <Text>商品支付页面</Text>
       </View>
     )
   }
+
+
 }
 
 export default Pay

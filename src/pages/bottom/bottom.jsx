@@ -29,10 +29,6 @@ class Bottom extends Component {
   payInformation(){
     Taro.navigateTo({
       url: '/pages/index/pay',
-      success: function (res) {
-        // 通过eventChannel向被打开页面传送数据
-        res.eventChannel.emit('acceptDataFromOpenerPage', { data: 'test' })
-      }
     })
 
   }

@@ -24,11 +24,9 @@ class Classify extends Component {
         this.props.onChangeClassify&&this.props.onChangeClassify(this.state.selectClassify);
       })
       event.emit("changeClassify");
-
     }else if (!this.state.selectClassify){
       this.setState({selectClassify:item},()=>{
         this.props.onChangeClassify&&this.props.onChangeClassify(this.state.selectClassify);
-
       })
       event.emit("changeClassify");
     }

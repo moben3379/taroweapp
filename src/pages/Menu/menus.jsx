@@ -41,11 +41,6 @@ class Menus extends Component {
   }
   }
 
-  // getData(selectClassify){
-  //   return  Array.from(Array(Math.round(Math.random()*20)),(v,k)=>({menu_Form:selectClassify.id,menu_Id:selectClassify.id+"_"+k,menu_Name:"分类菜品"+selectClassify.id+"菜品"+(k+1)}))
-  // }
-
-
 
 getData(){
   Taro.request({
@@ -75,14 +70,13 @@ getData(){
       <AtTabs current={current}    tabList={tabList} onClick={this.handleClick.bind(this)}>
         <AtTabsPane >
           <View className="menu_body">
-          <Classify onChangeClassify={this.changeClassify.bind(this)}></Classify>
+          <Classify onChangeClassify={this.changeClassify.bind(this)} ></Classify>
           <MenuList selectClassify={selectClassify}  currentList={currentList}></MenuList>
           </View>
         </AtTabsPane>
         <AtTabsPane >商家</AtTabsPane>
         <AtTabsPane >其他服务</AtTabsPane>
-          })
-        }
+
       </AtTabs>
       </View>
     )

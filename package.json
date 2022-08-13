@@ -8,6 +8,7 @@
     "typescript": false,
     "css": "sass"
   },
+
   "scripts": {
     "build:weapp": "taro build --type weapp",
     "build:swan": "taro build --type swan",
@@ -56,7 +57,7 @@
     "axios": "^0.27.2",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-redux": "^7.2.0",
+    "react-redux": "^7.2.8",
     "redux": "^4.0.0",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
@@ -65,7 +66,7 @@
   "devDependencies": {
     "@babel/core": "^7.8.0",
     "@pmmmwh/react-refresh-webpack-plugin": "0.5.5",
-    "@tarojs/cli": "3.5.0",
+    "@tarojs/cli": "^3.5.0",
     "@tarojs/plugin-babel": "^2.2.10",
     "@tarojs/webpack5-runner": "3.5.0",
     "@types/react": "^18.0.0",
@@ -83,4 +84,5 @@
   "resolutions": {
     "@types/react": "^17.0.2"
   }
-}
+  }
+

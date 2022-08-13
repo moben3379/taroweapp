@@ -1,10 +1,8 @@
 export default defineAppConfig({
   pages: [
     'pages/index/index',
-  'pages/index/pay'
+    'pages/index/pay'
   ],
-
-
   window: {
     backgroundTextStyle: 'light',
     navigationBarBackgroundColor: '#fff',
@@ -25,6 +23,11 @@ export default defineAppConfig({
         "edit"
       ]
     },
-
+    {
+      "root": "pages/cart/",
+      "pages": [
+        "cart"
+      ]
+    },
   ]
 })
