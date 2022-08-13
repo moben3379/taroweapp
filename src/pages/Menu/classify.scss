@@ -1,0 +1,17 @@
+
+
+.classify{
+  display: flex;
+  flex-direction: column;
+    .classify_title{
+    display: block;
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 28px;
+  }
+  .select{
+    color: red;
+  }
+}

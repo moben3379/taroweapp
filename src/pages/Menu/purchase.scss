@@ -1,0 +1,28 @@
+
+.add{
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+   .dec_img{
+    height: 39px;
+    width: 39px;
+
+  }
+   .add_img{
+    height: 35px;
+    width: 35px;
+     color: wheat;
+  }
+  .menu_num{
+    min-width: 30px;
+    line-height: 48px;
+    font-size: 30px;
+    text-align: center;
+    vertical-align: text-bottom;
+  }
+
+}
+
+.hide{
+  display: none;
+}

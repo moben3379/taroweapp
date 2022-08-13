@@ -1,0 +1,22 @@
+
+.activity{
+ display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 18px;
+  padding:0 10px;
+  height: 30px;
+  margin-top: 10px;
+  .type{
+    color: #FFFFFF;
+    background-color: orangered;
+    width: 40px;
+    height: 40px;
+    border-radius: 1px;
+    text-align: center;
+    line-height: 20px;
+  }
+  .length {
+    font-size: 20px;
+  }
+}

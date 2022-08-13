@@ -1,17 +1,16 @@
 
 //全局属性
+import {SELECTMENU} from "../constants/menu";
+
 const  INIT_STATE={
-  menuList:[]
 }
 
 export  default function menu(previousState=INIT_STATE,action){
-
-  let {type,menuList}=action;
-  switch (type){
-    case 'selectMenu':
+  switch (action.type,action.menuList){
+    case SELECTMENU:
       return {
         ...previousState,
-        menuList: menuList.data
+        menuList: previousState.menuList
       };
     default :
       return previousState;

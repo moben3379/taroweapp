@@ -1,16 +1,16 @@
-// eslint-disable-next-line no-unused-vars
 import React,{Component} from 'react'
 import {View} from '@tarojs/components'
 import TabBar from "../common/tabBar";
 import Swiper from "./indexSwiper";
-import Menus from "./menus";
-import Cart from "./cart";
+import Menus from "../Menu/menus";
+import Bottom from "../bottom/bottom";
+import Top from "./top";
+
 
 class Index extends Component {
   constructor (props) {
     super(props);
   }
-
   // componentWillReceiveProps(nextProps) {
   // }
   // componentDidMount(){
@@ -24,18 +24,12 @@ class Index extends Component {
   // componentDidHide() {
   // }
 
-
   render() {
     return (
-      <View>
-
-
+      <View className='index'>
         <Swiper></Swiper>
-
         <Menus></Menus>
-
-        <Cart></Cart>
-
+        <Bottom></Bottom>
         <TabBar tabBarCurrent={0} />
       </View>
     )
