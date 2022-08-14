@@ -1,40 +1,85 @@
-import React,{ Component } from 'react'
-import { View} from '@tarojs/components'
-import {AtTabs, AtTabsPane} from "taro-ui";
+import React, {Component} from 'react'
+import {Text, View} from '@tarojs/components'
+import {AtButton, AtFloatButton, AtTabs, AtTabsPane} from "taro-ui";
 import "taro-ui/dist/style/components/tabs.scss";
-
-
-
+import Taro from "@tarojs/taro";
+import "./ordersList.scss"
 
 class OrdersList extends Component {
-  constructor () {
+  constructor() {
     super(...arguments)
     this.state = {
+      orderList: [],
       current: 0,
+
+
     }
   }
-  handleClick (value) {
+
+  handleClick(value) {
     this.setState({
       current: value
     })
   }
-  render () {
+
+  componentDidMount() {
+    this.Order()
+  }
+
+  Order() {
+    Taro.request({
+      url: 'https://g2.glypro19.com/api/getOrderList',
+      data: {},
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      method: 'GET',
+      dataType: 'json',
+      credentials: 'include',
+      success: (res) => {
+        this.setState({
+          orderList: res.data.data
+        })
+      },
+    });
+
+  }
+
+
+  render() {
+    const list = this.state.orderList
+    console.log("============", list)
     return (
-        <AtTabs
-            current={this.state.current}
-            scroll
-            tabList={[
-              { title: '今日订单' },
-              { title: '历史订单' },
-            ]}
-            onClick={this.handleClick.bind(this)}>
-          <AtTabsPane current={this.state.current} index={0}>
-            <View style='font-size:18px;text-align:center;height:100px;'>标签页一的内容</View>
-          </AtTabsPane>
-          <AtTabsPane current={this.state.current} index={1}>
-            <View style='font-size:18px;text-align:center;height:100px;'>标签页二的内容</View>
-          </AtTabsPane>
-        </AtTabs>
+      <View className="order">
+        <View>我的订单</View>
+        {
+          //按照order_id降序遍历
+          list.sort((a, b) => b.order_id - a.order_id)
+            .map((item)=>{
+              if(item.buyer_openid==64164){
+                return(
+                 <View className="orderList">
+                   <View className="order_num">
+                     <Text>订单编号：{item.order_id}</Text>
+                     <Text>订单状态：{item.order_status}</Text>
+                   </View>
+                   <View className="order_name">
+                      <View>{item.buyer_name}</View>
+                   </View>
+                   <View className="order_bottom">
+                     <Text>{item.create_time}</Text>
+                     <Text>
+                       合计：￥{item.menu_price}
+                     </Text>
+                   </View>
+                     <AtButton className="at-button" size='small'>再来一单</AtButton>
+                     <AtButton className="at-button" size='small'>评价</AtButton>
+                 </View>
+                )
+              }
+            })
+        }
+      </View>
     )
   }
 }
