@@ -13,19 +13,19 @@ class Activity extends Component {
       }]
     }
   }
-getTextByType(type){
+  getTextByType(type){
     switch (type) {
       case "dec":
         return "满减优惠"
-      break;
+        break;
       default:
         return "满减优惠"
-      break;
+        break;
     }
-}
-getLine(arr){
-  return   arr.map((item)=>`满￥{item.total}减${item.dec},优惠多多哦`).join(';')
-}
+  }
+  getLine(arr){
+    return   arr.map((item)=>`满'${item.total}减${item.dec},优惠多多哦`).join(';')
+  }
   render() {
     let {activity:[first]}=this.state;
     return (
@@ -39,4 +39,3 @@ getLine(arr){
 }
 
 export default Activity
-

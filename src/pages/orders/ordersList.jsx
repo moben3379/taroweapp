@@ -4,6 +4,7 @@ import {AtButton, AtFloatButton, AtTabs, AtTabsPane} from "taro-ui";
 import "taro-ui/dist/style/components/tabs.scss";
 import Taro from "@tarojs/taro";
 import "./ordersList.scss"
+import * as global from "../global_val/global_val"
 
 class OrdersList extends Component {
   constructor() {
@@ -56,7 +57,7 @@ class OrdersList extends Component {
           //按照order_id降序遍历
           list.sort((a, b) => b.order_id - a.order_id)
             .map((item)=>{
-              if(item.buyer_openid==64164){
+              if(item.buyer_openid== global.getOpenId()){
                 return(
                  <View className="orderList">
                    <View className="order_num">

@@ -8,6 +8,7 @@ import { AtTabs, AtTabsPane} from "taro-ui";
 import Classify from "./classify";
 
 import MenuList from "./menuList";
+import Merchant from "./merchant";
 
 class Menus extends Component {
   constructor() {
@@ -74,8 +75,8 @@ getData(){
           <MenuList selectClassify={selectClassify}  currentList={currentList}></MenuList>
           </View>
         </AtTabsPane>
-        <AtTabsPane >商家</AtTabsPane>
-        <AtTabsPane >其他服务</AtTabsPane>
+        <AtTabsPane ><Merchant></Merchant></AtTabsPane>
+        <AtTabsPane ></AtTabsPane>
 
       </AtTabs>
       </View>
