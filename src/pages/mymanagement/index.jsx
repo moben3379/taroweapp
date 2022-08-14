@@ -26,7 +26,7 @@ class MyManagement extends Component {
       success(res){/*--------获取code-----------*/
         if (res.code){
           Taro.request({/*-------向微信后台获取openid----------*/
-            url:global.geturl()+'wxapp/code2session/login',
+            url:global.geturl()+'api/wxapp/code2session/login',
             data:{
               code:res.code
             },
@@ -127,6 +127,7 @@ class MyManagement extends Component {
     global.setAddress("")/*-------将地址设置为空值-------*/
     global.setPhone("")/*----------将号码设置为空值-----------*/
     this.setState({isLoggedIn: global.getIsLogin()});
+    global.setOpenId("")
   }
 
   handleClick(){/*-------------跳转到编辑地址、号码信息页面--------------*/

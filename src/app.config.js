@@ -1,5 +1,7 @@
 export default defineAppConfig({
   pages: [
+    'pages/mymanagement/index',
+    "pages/mymanagement/edit",
     'pages/index/index',
   ],
   window: {
@@ -15,11 +17,17 @@ export default defineAppConfig({
         "index"
       ]
     },
+    // {
+    //   "root": "pages/mymanagement/",
+    //   "pages": [
+    //     "index",
+    //
+    //   ]
+    // },
     {
-      "root": "pages/mymanagement/",
+      "root": "pages/pay/",
       "pages": [
-        "index",
-        "edit"
+        "pay"
       ]
     },
     {

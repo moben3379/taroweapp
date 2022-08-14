@@ -21,7 +21,7 @@ class MenuList extends Component {
                   <image className='menuList_img'  src={item.menu_detail}> </image>
                   <View className='menuList_list_list'>
                     <Text>{item.menu_Name}</Text>
-                    <Text>月售:{item.menu_Count}</Text>
+                    <Text>月售:{item.menu_Icon}</Text>
                     <Text className='menuList_Price'>￥{item.menu_Price}</Text>
                     <Purchase menu={item}></Purchase>
                   </View>
@@ -29,7 +29,7 @@ class MenuList extends Component {
               }})
           }
         </View>
-        </View>
+      </View>
     )
   }
 }

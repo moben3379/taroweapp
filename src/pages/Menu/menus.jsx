@@ -75,12 +75,8 @@ getData(){
           <MenuList selectClassify={selectClassify}  currentList={currentList}></MenuList>
           </View>
         </AtTabsPane>
-        <AtTabsPane >
-          <View style='height:500px;font-size:22px'>
-            <Merchant></Merchant>
-          </View>
-        </AtTabsPane>
-        <AtTabsPane>其他服务</AtTabsPane>
+        <AtTabsPane ><Merchant></Merchant></AtTabsPane>
+        <AtTabsPane ></AtTabsPane>
 
       </AtTabs>
       </View>
