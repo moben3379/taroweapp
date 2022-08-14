@@ -32,6 +32,8 @@
   color: #89888d;
     height: 100px;
   .text_left{
+    position: absolute;
+    left: 35%;
     font-size: 28px;
   text-align: center;
     line-height: 60px;
@@ -57,6 +59,62 @@
       line-height: 90px;
       text-align: center;
       border-radius: 0 50px 50px 0;
+      position:absolute;
+      left: 80%;
+    }
+    .shopping{
+      position: absolute;
+      left: 10%;
+    }
+    .login{
+      font-weight: bold;
+      color: black;
+      background-color: #eeeeee;
+      font-size: 25px;
+      width: 130px;
+      display: block;
+      height: 100%;
+      line-height: 90px;
+      text-align: center;
+      border-radius: 0 50px 50px 0;
+      position:absolute;
+      left: 80%;
     }
   }
+}
+.cartList{
+  padding: 10px;
+  flex-grow: 1;
+  display: flex;
+  margin-top: 20px;
+  flex-direction: row;
+  .cartList_Name{
+    flex-grow: 1;
+    position: relative;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    height: 200px;
+    justify-content: space-between;
+  }
+  .cartList_Price {
+    position: relative;
+    right: 15px;
+    color: red;
+    font-size: 40px;
+  }
+  .cartList_Num{
+    position: relative;
+    bottom: 100px;
+    right: 15%;
+    font-size: 40px;
+    color: #022f2f;
+  }
+  .cartList_img{
+    width: 200px;
+    height: 200px;
+    border-radius: 4px;
+  }
+
 }

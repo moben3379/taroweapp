@@ -1,7 +1,8 @@
 export default defineAppConfig({
   pages: [
+    'pages/mymanagement/index',
+    "pages/mymanagement/edit",
     'pages/index/index',
-    'pages/index/pay'
   ],
   window: {
     backgroundTextStyle: 'light',
@@ -16,17 +17,23 @@ export default defineAppConfig({
         "index"
       ]
     },
-    {
-      "root": "pages/mymanagement/",
-      "pages": [
-        "index",
-        "edit"
-      ]
-    },
+    // {
+    //   "root": "pages/mymanagement/",
+    //   "pages": [
+    //     "index",
+    //
+    //   ]
+    // },
     {
       "root": "pages/cart/",
       "pages": [
         "cart"
+      ]
+    },
+    {
+      "root": "pages/pay/",
+      "pages": [
+        "pay"
       ]
     },
   ]
