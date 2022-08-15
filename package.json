@@ -8,7 +8,6 @@
     "typescript": false,
     "css": "sass"
   },
-
   "scripts": {
     "build:weapp": "taro build --type weapp",
     "build:swan": "taro build --type swan",
@@ -84,5 +83,4 @@
   "resolutions": {
     "@types/react": "^17.0.2"
   }
-  }
-
+}
