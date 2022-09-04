@@ -36,5 +36,11 @@ export default defineAppConfig({
         "pay"
       ]
     },
+    {
+      "root": "pages/detailsView/",
+      "pages": [
+        "detailsView"
+      ]
+    },
   ]
 })
