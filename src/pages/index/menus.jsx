@@ -59,7 +59,7 @@ class Menus extends Component {
     return (
       <AtTabs current={this.state.current}
         tabDirection='vertical'
-        height='300px'
+        height='350px'
         scroll tabList={tabList}
         onClick={this.handleClick.bind(this)}
       >

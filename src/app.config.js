@@ -25,9 +25,9 @@ export default defineAppConfig({
     //   ]
     // },
     {
-      "root": "pages/cart/",
+      "root": "pages/pay/",
       "pages": [
-        "cart"
+        "pay"
       ]
     },
     {

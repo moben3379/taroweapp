@@ -1,11 +1,17 @@
+
+
 var isLogin=false
 var AtAvatarUrl=''
 var nickName=''
 var address=''
 var phone=''
 var openId=''
-var url = 'http://localhost:8090/'
-var totlePrice=''
+var allPrice=''
+var  allNum=''
+var url = 'https://g2.glypro19.com/'
+
+
+
 
 export function setIsLogin(val){
   isLogin=val
@@ -51,10 +57,16 @@ export function geturl(){
   return url
 }
 
-export function gettotlePrice(){
-  return totlePrice
+export function setAllPrice(val){
+  allPrice=val
+}
+export function getAllPrice(){
+  return allPrice
 }
 
-export function settotlePrice(val){
-  totlePrice=val
+export function setAllNum(val){
+   allNum=val
+}
+export function getAllNum(){
+  return allNum
 }

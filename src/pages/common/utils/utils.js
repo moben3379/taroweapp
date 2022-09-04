@@ -27,6 +27,7 @@ export  function  setFoodCount(menu,Num,type,callBack){
           foods[menu.menu_Id].Num=Num-1;
         }
       }
+
       Taro.setStorageSync(foodKey,foods);
       callBack&&callBack();
     }
@@ -59,4 +60,13 @@ export  function  getAll(){
     })
   }
   return {allNum,allPrice}
+}
+
+export  function  getFoods(){
+  let arrFood=0;
+  let foods=Taro.getStorageSync(foodKey)
+  if (foods){
+    arrFood=foods;
+  }
+  return arrFood;
 }
